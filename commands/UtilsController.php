@@ -121,8 +121,8 @@ class UtilsController extends Controller
     }
     /**
     * This command show information about FTP connect and try to connect to FTP Server.
-     * @return int Exit code
-     */
+    * @return int Exit code
+    */
     public function actionCheckFtp()
     {
         echo 'Utils Controller Action check-ftp' . PHP_EOL;
@@ -142,7 +142,10 @@ class UtilsController extends Controller
             return ExitCode::UNSPECIFIED_ERROR;
         } 
     }
-
+    /**
+     * This command get information about Advertiser from ftp and put to DB
+     * @return int Exit code
+     */
     public function actionGetAdvertiser()
     {
         echo 'Utils Controller Action get-advertiser' . PHP_EOL;
@@ -173,6 +176,12 @@ class UtilsController extends Controller
         } 
     }
 
+    /**
+     * This command get information for day from ftp and put to DB
+     * @param string $from ex. 2020-02-01
+     * @param string $to ex. 2020-02-04 
+     * @return int Exit code
+     */
     public function actionGetData($from = '', $to = '')
     {
         echo 'Utils Controller Action get-data' . PHP_EOL;
